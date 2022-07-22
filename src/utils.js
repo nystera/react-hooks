@@ -17,6 +17,7 @@ function useLocalStorageState(
     if (valueInLocalStorage) {
       return deserialize(valueInLocalStorage)
     }
+    console.log(`def val for ${key}`, defaultValue)
     return typeof defaultValue === 'function' ? defaultValue() : defaultValue
   })
 
